@@ -438,6 +438,7 @@ if (isset($_GET['id'])) {
                 url: form_action, 
                 data: form_data,
                 success: function(response) {
+
                     $('#font_group_form')[0].reset();
                     
                     $('#group_title').val('');  
@@ -466,7 +467,7 @@ if (isset($_GET['id'])) {
                     
                     $('#response_message1').html("<span style='background-color: #40E0D0; padding:5px;'>Font group update successfully.</span>");
 
-                    $('#font_group_form').trigger("reset");
+                   // $('#font_group_form').trigger("reset");
                     $('#group_list').html($(response).find('#group_list').html());
 
                 },
